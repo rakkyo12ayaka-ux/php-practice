@@ -104,16 +104,15 @@ class Student
         $this->studentName = $name;
     }
 
-    function attend($subject)
+    public function attend($subject)
     {
-        echo "{$subject}の授業に出席しました。";
+        echo "{$this->studentName}は{$subject}の授業に出席しました。学籍番号：{$this->studentId}";
     }
 }
 
 $yamada = new Student(120, '山田');
-$ito = new Student(13, '伊藤');
 $yamada->attend('PHP');
-$ito->attend('PHP');
+
 
 
 // Q5 定義済みクラス
@@ -131,6 +130,6 @@ $past = new DateTime('1992-04-25');
 
 $diff = $today->diff($past);
 
-echo "あの日から" . $diff->days . "日経過しました。";
+echo "あの日から" . $diff->days . "経過しました。";
 
 ?>
